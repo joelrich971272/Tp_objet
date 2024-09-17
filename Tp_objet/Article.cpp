@@ -1,13 +1,15 @@
-#include<iomanip>
-#include"Article.h"
-#include<list>
-#include<iostream>
-#include"Gestion.cpp"
-#include<vector>
+#include "Article.h"
 using namespace std;
 
-class Article {
+	Article::Article(string n)
+{
+		nom = n;
+}
 	
 
 
-};
+	string Article::getNom()
+{
+		return nom;
+}
+	

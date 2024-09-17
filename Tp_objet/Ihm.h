@@ -1,19 +1,13 @@
+#pragma once
 #include"Gestion.h"
 class IHM
 {
-
-	Gestion* gest;
-
 public:
+	Gestion magasin;
+	
 
-	IHM();
-	~IHM();
+	void AfficheMenu();
+	void AjouterUnArticle();
+	void ListerLesArticles();
 
-	void Start(Gestion* gest);
-private:
-	int AfficheMenu();
-	int ChoixEtudiant();
-	void Modifier(Article*);
-	void Afficher(Article*);
-	void AfficherTout();
 };

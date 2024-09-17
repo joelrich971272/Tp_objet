@@ -1,4 +1,11 @@
 #pragma once
+
+
+#include <string>
+using namespace std;
+
+
+
 class Article
 {
 	string nom;
@@ -7,6 +14,6 @@ public:
 	string getNom();
 	double prixHT;
 	int stock;
-	void Afficherinfo();
+	
 	
 };

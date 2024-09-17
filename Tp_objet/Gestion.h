@@ -1,17 +1,20 @@
 #pragma once
 #include "Article.h"
+#include <vector>
+
+
 class Gestion
 {
-	vector<Article*>* listeArticle;
+	vector<Article*> lesArticles;
 
 
 public:
 	Gestion();
-	~Gestion();
 
-	int getTaille();
+	void AjouterArticle(Article* art);
+	Article* LireUnArticle(int index);
+	void SupprimerUnArticle(int index);
 
-	Article* Ajouter();
-	Article* LireAt(int pos);
-	bool Supprimer(int pos);
+	int getNombreArticles();
+
 };
