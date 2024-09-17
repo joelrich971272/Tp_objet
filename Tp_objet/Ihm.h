@@ -9,5 +9,6 @@ public:
 	void AfficheMenu();
 	void AjouterUnArticle();
 	void ListerLesArticles();
+	void SupprimerArticle();
 
 };

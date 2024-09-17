@@ -27,7 +27,7 @@ void IHM::AfficheMenu()
 			AjouterUnArticle();
 			break;
 		case 3:
-			SupprimerUnArticle();
+			SupprimerArticle();
 			break;
 		default:
 			break;
@@ -75,17 +75,20 @@ void IHM::ListerLesArticles()
 
 	}
 }
-void Gestion::SupprimerUnArticle(int index)
+void IHM::SupprimerArticle()
 {
-	if ((index >= 0) && (index < getNombreArticles()))
+	int index;
+	cout << "Inserer l'index de l'article" << endl;
+	cin >> index;
+	ListerLesArticles;
+	Article* LireUnArticle(int index);
+	if ((index >= 0) && (index < magasin.getNombreArticles()))
 	{
-		int max = magasin.getNombreArticles();
-		Article* temp = magasin.LireUnArticle(i);
-		cout << "---====" << i << "====---" << endl;
+		cout << "-==Saisie le nom de l'article que vous souhaitez supprimer ==-" << endl;
+		cout << "---========---" << endl;
 		cout << "Nom    :";
-
-		cout << temp->getNom() << endl;
 		Article* temp = LireUnArticle(index);
+		cout << temp->getNom() << endl;
 		delete temp;
 		lesArticles.erase(lesArticles.begin() + index);
 	}
